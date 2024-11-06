@@ -36,5 +36,3 @@ Implementation Steps
 4. Evaluation: Keep an eye on how well aligned articles are doing compared to others and adjust the strategy if needed.
 
 5. Optimization: Fine-tune the system to better promote aligned articles.
-
-i want code implementation
