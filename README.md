@@ -1,6 +1,6 @@
 # Reinforcement-Learning-CIA
 
-##1. Media companies want to increase views on certain "aligned" articles that are politically or commercially important. The challenge is to promote these articles effectively while also finding other articles that might attract high views.
+# 1. Media companies want to increase views on certain "aligned" articles that are politically or commercially important. The challenge is to promote these articles effectively while also finding other articles that might attract high views.
 
 
 K-arm Bandit
@@ -37,86 +37,86 @@ Implementation Steps
 
 5. Optimization: Fine-tune the system to better promote aligned articles.
 
-##2. MDP-based RL agent
+# 2. MDP-based RL agent
 Creating a 100x100 grid with obstacles and then building an MDP-based RL agent to optimize policies and actions involves several steps. Below is a high-level outline of how you can approach this problem, including the implementation of a Dynamic Programming (DP) method and other RL solutions for benchmarking.
 
 Step 1: Define the Grid Environment
 Grid Initialization: Create a 100x100 grid.
 
-Obstacles Placement: Randomly place obstacles in the grid.
+- Obstacles Placement: Randomly place obstacles in the grid.
 
-Start and Goal Points: Randomly select two points as the start and goal.
+- Start and Goal Points: Randomly select two points as the start and goal.
 
 Step 2: Define the MDP Components
-States: Each cell in the grid is a state.
+- States: Each cell in the grid is a state.
 
-Actions: Define actions as movements (up, down, left, right, diagonal).
+- Actions: Define actions as movements (up, down, left, right, diagonal).
 
-Transition Probabilities: Define deterministic transitions (e.g., moving from one cell to another).
+- Transition Probabilities: Define deterministic transitions (e.g., moving from one cell to another).
 
-Rewards: Assign rewards based on the state transitions (e.g., -1 for each step, +100 for reaching the goal, -100 for hitting an obstacle).
+- Rewards: Assign rewards based on the state transitions (e.g., -1 for each step, +100 for reaching the goal, -100 for hitting an obstacle).
 
 Step 3: Implement Dynamic Programming (DP)
 Value Iteration:
 
-Initialize the value function for all states.
+- Initialize the value function for all states.
 
-Iterate until convergence:
+- Iterate until convergence:
 
-Update the value function using the Bellman equation.
+- Update the value function using the Bellman equation.
 
-Extract the optimal policy from the value function.
+- Extract the optimal policy from the value function.
 
 Policy Iteration:
 
-Initialize a random policy.
+- Initialize a random policy.
 
-Iterate until convergence:
+- Iterate until convergence:
 
-Policy Evaluation: Compute the value function for the current policy.
+- Policy Evaluation: Compute the value function for the current policy.
 
-Policy Improvement: Update the policy based on the value function.
+- Policy Improvement: Update the policy based on the value function.
 
 Step 4: Implement Reinforcement Learning (RL) Algorithms
 Q-Learning:
 
-Initialize the Q-table.
+- Initialize the Q-table.
 
-Iterate through episodes:
+- Iterate through episodes:
 
-Choose an action using an epsilon-greedy policy.
+- Choose an action using an epsilon-greedy policy.
 
-Update the Q-value using the Q-learning update rule.
+= Update the Q-value using the Q-learning update rule.
 
 SARSA:
 
-Initialize the Q-table.
+- Initialize the Q-table.
 
-Iterate through episodes:
+- Iterate through episodes:
 
-Choose an action using an epsilon-greedy policy.
+- Choose an action using an epsilon-greedy policy.
 
-Update the Q-value using the SARSA update rule.
+- Update the Q-value using the SARSA update rule.
 
 Deep Q-Network (DQN):
 
-Use a neural network to approximate the Q-function.
+- Use a neural network to approximate the Q-function.
 
-Implement experience replay and target networks.
+- Implement experience replay and target networks.
 
-Train the network using the DQN update rule.
+- Train the network using the DQN update rule.
 
 Step 5: Benchmarking
 Performance Metrics:
 
-Number of steps to reach the goal.
+- Number of steps to reach the goal.
 
-Cumulative reward.
+- Cumulative reward.
 
-Convergence time.
+- Convergence time.
 
 Comparison:
 
-Compare the performance of DP methods (Value Iteration, Policy Iteration) with RL methods (Q-Learning, SARSA, DQN).
+- Compare the performance of DP methods (Value Iteration, Policy Iteration) with RL methods (Q-Learning, SARSA, DQN).
 
-Plot the results to visualize the differences.
+- Plot the results to visualize the differences.
